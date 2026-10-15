@@ -1,0 +1,290 @@
+2026-10-03 10:19:49 | INFO     | uvicorn.error                | Started server process [13872]
+2026-10-03 10:19:49 | INFO     | uvicorn.error                | Waiting for application startup.
+2026-10-03 10:19:49 | INFO     | backend.main                 | ==============================================================
+2026-10-03 10:19:49 | INFO     | backend.main                 | Smart Classroom Monitoring System v0.2.0 starting
+2026-10-03 10:19:49 | INFO     | backend.main                 | Mode: REAL_HARDWARE
+2026-10-03 10:19:49 | INFO     | backend.main                 | CORS origins: http://localhost:5173, http://127.0.0.1:5173
+2026-10-03 10:19:49 | INFO     | backend.main                 | Arduino port: auto-discovery enabled
+2026-10-03 10:19:49 | INFO     | backend.main                 | ==============================================================
+2026-10-03 10:19:49 | INFO     | backend.main                 | Serial manager ready (monitoring is OFF until requested)
+2026-10-03 10:19:49 | INFO     | backend.main                 | CV engine ready (detector=YuNet, camera=0, not started)
+2026-10-03 10:20:03 | INFO     | app.services.ml_service      | ML model loaded: DecisionTree (features=['temp_mean', 'light_mean', 'pir_count'], metrics={'accuracy': 0.9985, 'precision': 0.9948, 'recall': 0.9974, 'f1': 0.9961, 'f1_macro': 0.9976})
+2026-10-03 10:20:03 | INFO     | backend.main                 | ML model ready: DecisionTree
+2026-10-03 10:20:03 | INFO     | app.services.history_db      | History database ready at D:\Smart_Classroom_Monitoring_System\backend\data\history.db
+2026-10-03 10:20:03 | INFO     | app.services.history_recorder | History recorder started (sample every 2.0s)
+2026-10-03 10:20:03 | INFO     | backend.main                 | History database ready: D:\Smart_Classroom_Monitoring_System\backend\data\history.db
+2026-10-03 10:20:03 | INFO     | app.services.broadcaster     | State broadcaster started (poll 50 ms)
+2026-10-03 10:20:03 | INFO     | uvicorn.error                | Application startup complete.
+2026-10-03 10:20:03 | INFO     | uvicorn.error                | Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-10-03 10:20:03 | INFO     | uvicorn.access               | 127.0.0.1:59831 - "GET /health HTTP/1.1" 200
+2026-10-03 10:20:17 | INFO     | uvicorn.access               | 127.0.0.1:64283 - "GET /health HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:60169 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:53549 - "GET /health HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:60416 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:57259 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:60169 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.error                | 127.0.0.1:52535 - "WebSocket /ws" [accepted]
+2026-10-03 10:20:27 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:20:27 | INFO     | app.services.websocket_manager | WebSocket client connected (1 total)
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:60169 - "GET /health HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:60169 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:60169 - "GET /health HTTP/1.1" 200
+2026-10-03 10:20:27 | INFO     | uvicorn.access               | 127.0.0.1:60169 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:23:05 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:23:05 | INFO     | uvicorn.access               | 127.0.0.1:50797 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:23:05 | INFO     | uvicorn.access               | 127.0.0.1:50797 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:23:06 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:23:06 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:23:14 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:23:14 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:23:16 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:23:16 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:23:16 | INFO     | uvicorn.access               | 127.0.0.1:53340 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:23:16 | INFO     | uvicorn.access               | 127.0.0.1:53340 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:23:17 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:23:17 | INFO     | uvicorn.access               | 127.0.0.1:53340 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:23:17 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:23:17 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:23:17 | INFO     | uvicorn.access               | 127.0.0.1:53340 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:23:23 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:23:23 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:23:41 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:23:41 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:23:41 | INFO     | uvicorn.access               | 127.0.0.1:58097 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:23:41 | INFO     | uvicorn.access               | 127.0.0.1:58097 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:23:44 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:23:44 | INFO     | uvicorn.access               | 127.0.0.1:58097 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:23:44 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:23:44 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:23:44 | INFO     | uvicorn.access               | 127.0.0.1:58097 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:23:50 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:23:50 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /health HTTP/1.1" 200
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:25:32 | INFO     | uvicorn.error                | 127.0.0.1:58858 - "WebSocket /ws" [accepted]
+2026-10-03 10:25:32 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:25:32 | INFO     | app.services.websocket_manager | WebSocket client connected (2 total)
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /health HTTP/1.1" 200
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /health HTTP/1.1" 200
+2026-10-03 10:25:32 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:25:36 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:25:36 | INFO     | uvicorn.access               | 127.0.0.1:51694 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:25:36 | INFO     | uvicorn.access               | 127.0.0.1:58359 - "GET /api/cv/stream HTTP/1.1" 200
+2026-10-03 10:26:25 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:26:25 | INFO     | app.services.websocket_manager | WebSocket client disconnected (1 remain)
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:51653 - "GET /health HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:51653 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:51653 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:51653 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:51653 - "GET /health HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:51653 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:51479 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:54018 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.error                | 127.0.0.1:51379 - "WebSocket /ws" [accepted]
+2026-10-03 10:26:30 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:26:30 | INFO     | app.services.websocket_manager | WebSocket client connected (2 total)
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:54018 - "GET /health HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:54018 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:54018 - "GET /health HTTP/1.1" 200
+2026-10-03 10:26:30 | INFO     | uvicorn.access               | 127.0.0.1:54018 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:26:35 | INFO     | uvicorn.access               | 127.0.0.1:54018 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:26:36 | INFO     | uvicorn.access               | 127.0.0.1:54018 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:26:36 | INFO     | uvicorn.access               | 127.0.0.1:55836 - "GET /api/cv/stream HTTP/1.1" 200
+2026-10-03 10:26:46 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:26:46 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:26:46 | INFO     | uvicorn.access               | 127.0.0.1:53118 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:26:46 | INFO     | uvicorn.access               | 127.0.0.1:53118 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:26:52 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:26:52 | INFO     | app.services.websocket_manager | WebSocket client disconnected (1 remain)
+2026-10-03 10:36:52 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:36:52 | INFO     | uvicorn.access               | 127.0.0.1:62154 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:36:52 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:36:52 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:36:52 | INFO     | uvicorn.access               | 127.0.0.1:62154 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:36:57 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:36:57 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:36:58 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:36:58 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:36:58 | INFO     | uvicorn.access               | 127.0.0.1:49230 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:36:58 | INFO     | uvicorn.access               | 127.0.0.1:49230 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:37:08 | INFO     | uvicorn.access               | 127.0.0.1:49511 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:37:08 | INFO     | uvicorn.access               | 127.0.0.1:49511 - "GET /health HTTP/1.1" 200
+2026-10-03 10:37:08 | INFO     | uvicorn.access               | 127.0.0.1:61403 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:37:08 | INFO     | uvicorn.access               | 127.0.0.1:49511 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:37:08 | INFO     | uvicorn.access               | 127.0.0.1:61403 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:37:08 | INFO     | uvicorn.error                | 127.0.0.1:50153 - "WebSocket /ws" [accepted]
+2026-10-03 10:37:08 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:37:08 | INFO     | app.services.websocket_manager | WebSocket client connected (2 total)
+2026-10-03 10:37:09 | INFO     | uvicorn.access               | 127.0.0.1:61403 - "GET /health HTTP/1.1" 200
+2026-10-03 10:37:09 | INFO     | uvicorn.access               | 127.0.0.1:61403 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:37:09 | INFO     | uvicorn.access               | 127.0.0.1:61403 - "GET /health HTTP/1.1" 200
+2026-10-03 10:37:09 | INFO     | uvicorn.access               | 127.0.0.1:61403 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:37:13 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:37:13 | INFO     | uvicorn.access               | 127.0.0.1:61403 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:37:13 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:37:13 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:37:13 | INFO     | uvicorn.access               | 127.0.0.1:61403 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:37:17 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:37:17 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:37:20 | INFO     | uvicorn.access               | 127.0.0.1:52997 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:37:21 | INFO     | uvicorn.access               | 127.0.0.1:52997 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:37:48 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:37:48 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:37:48 | INFO     | uvicorn.access               | 127.0.0.1:58858 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:37:48 | INFO     | uvicorn.access               | 127.0.0.1:58858 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:40:44 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:40:44 | INFO     | app.services.websocket_manager | WebSocket client disconnected (1 remain)
+2026-10-03 10:40:44 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:40:44 | INFO     | app.services.websocket_manager | WebSocket client disconnected (0 remain)
+2026-10-03 10:51:48 | INFO     | uvicorn.error                | 127.0.0.1:51491 - "WebSocket /ws" [accepted]
+2026-10-03 10:51:48 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:51:48 | INFO     | app.services.websocket_manager | WebSocket client connected (1 total)
+2026-10-03 10:51:48 | INFO     | uvicorn.error                | 127.0.0.1:51367 - "WebSocket /ws" [accepted]
+2026-10-03 10:51:48 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:51:48 | INFO     | app.services.websocket_manager | WebSocket client connected (2 total)
+2026-10-03 10:51:48 | INFO     | uvicorn.access               | 127.0.0.1:61240 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:48 | INFO     | uvicorn.access               | 127.0.0.1:61240 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:48 | INFO     | uvicorn.access               | 127.0.0.1:61240 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:48 | INFO     | uvicorn.access               | 127.0.0.1:61240 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:48 | INFO     | uvicorn.access               | 127.0.0.1:61240 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:48 | INFO     | uvicorn.access               | 127.0.0.1:61240 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:48 | INFO     | uvicorn.access               | 127.0.0.1:61240 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:48 | INFO     | uvicorn.access               | 127.0.0.1:57401 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:53 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:51:53 | INFO     | app.services.websocket_manager | WebSocket client disconnected (1 remain)
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:60904 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:60904 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:51:54 | INFO     | uvicorn.error                | 127.0.0.1:52360 - "WebSocket /ws" [accepted]
+2026-10-03 10:51:54 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:51:54 | INFO     | app.services.websocket_manager | WebSocket client connected (2 total)
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:54 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:55 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:51:55 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:51:55 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:51:55 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:51:55 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:51:57 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:51:57 | INFO     | app.services.websocket_manager | WebSocket client disconnected (1 remain)
+2026-10-03 10:51:58 | INFO     | uvicorn.access               | 127.0.0.1:58451 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:60904 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:50647 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:59459 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:63695 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:53114 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:59459 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:63695 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.error                | 127.0.0.1:63755 - "WebSocket /ws" [accepted]
+2026-10-03 10:51:59 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:51:59 | INFO     | app.services.websocket_manager | WebSocket client connected (2 total)
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:63695 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:63695 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:59459 - "GET /health HTTP/1.1" 200
+2026-10-03 10:51:59 | INFO     | uvicorn.access               | 127.0.0.1:59459 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:52:00 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:52:00 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:52:00 | INFO     | uvicorn.access               | 127.0.0.1:59459 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:52:00 | INFO     | uvicorn.access               | 127.0.0.1:59459 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:01 | INFO     | uvicorn.access               | 127.0.0.1:60224 - "GET /api/cv/stream HTTP/1.1" 200
+2026-10-03 10:52:07 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:52:07 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:52:07 | INFO     | uvicorn.access               | 127.0.0.1:56819 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:52:07 | INFO     | uvicorn.access               | 127.0.0.1:56819 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:15 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:52:15 | INFO     | uvicorn.access               | 127.0.0.1:60519 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:52:15 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:52:15 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:52:15 | INFO     | uvicorn.access               | 127.0.0.1:60519 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:19 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:52:19 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:52:20 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:52:20 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:52:20 | INFO     | uvicorn.access               | 127.0.0.1:60519 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:52:20 | INFO     | uvicorn.access               | 127.0.0.1:60519 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:52:20 | INFO     | uvicorn.access               | 127.0.0.1:60519 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:20 | INFO     | uvicorn.access               | 127.0.0.1:60519 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:21 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:52:21 | INFO     | uvicorn.access               | 127.0.0.1:60519 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:52:21 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:52:21 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:52:21 | INFO     | uvicorn.access               | 127.0.0.1:60519 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:25 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:52:25 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:52:27 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:52:27 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:52:27 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:52:27 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:28 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:52:28 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:52:28 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:52:28 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:52:28 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:32 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:52:32 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:52:33 | INFO     | app.services.camera          | Camera 0 released
+2026-10-03 10:52:33 | INFO     | app.services.cv_service      | CV service stopped
+2026-10-03 10:52:33 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:52:33 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:34 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "POST /api/cv/stop HTTP/1.1" 200
+2026-10-03 10:52:34 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:37 | INFO     | app.services.cv_service      | CV worker thread started
+2026-10-03 10:52:37 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:52:37 | INFO     | app.services.face_detector   | Detector YuNet loaded (model=face_detection_yunet_2023mar.onnx, confidence=0.60)
+2026-10-03 10:52:37 | INFO     | app.services.camera          | Opening camera index 0 (640x480)...
+2026-10-03 10:52:37 | INFO     | uvicorn.access               | 127.0.0.1:52962 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:52:40 | INFO     | app.services.camera          | Camera 0 opened
+2026-10-03 10:52:40 | INFO     | app.services.cv_service      | CV pipeline ready: camera + YuNet
+2026-10-03 10:52:43 | INFO     | uvicorn.access               | 127.0.0.1:54460 - "POST /api/cv/start HTTP/1.1" 200
+2026-10-03 10:52:43 | INFO     | uvicorn.access               | 127.0.0.1:54460 - "GET /api/cv/status HTTP/1.1" 200
+2026-10-03 10:53:38 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:53:38 | INFO     | app.services.websocket_manager | WebSocket client disconnected (1 remain)
+2026-10-03 10:53:38 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:53:38 | INFO     | app.services.websocket_manager | WebSocket client disconnected (0 remain)
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:50295 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:55626 - "GET /health HTTP/1.1" 200
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:50295 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:55626 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:50512 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:53:56 | INFO     | uvicorn.error                | 127.0.0.1:52961 - "WebSocket /ws" [accepted]
+2026-10-03 10:53:56 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:53:56 | INFO     | app.services.websocket_manager | WebSocket client connected (1 total)
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:50512 - "GET /health HTTP/1.1" 200
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:50512 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:50512 - "GET /health HTTP/1.1" 200
+2026-10-03 10:53:56 | INFO     | uvicorn.access               | 127.0.0.1:50512 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:55:07 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 10:55:07 | INFO     | app.services.websocket_manager | WebSocket client disconnected (0 remain)
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:59016 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:59016 - "GET /health HTTP/1.1" 200
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:49991 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:59016 - "GET /api/arduino/sensors HTTP/1.1" 200
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:58859 - "GET /api/ml/info HTTP/1.1" 200
+2026-10-03 10:55:09 | INFO     | uvicorn.error                | 127.0.0.1:54937 - "WebSocket /ws" [accepted]
+2026-10-03 10:55:09 | INFO     | uvicorn.error                | connection open
+2026-10-03 10:55:09 | INFO     | app.services.websocket_manager | WebSocket client connected (1 total)
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:58859 - "GET /health HTTP/1.1" 200
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:58859 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:58859 - "GET /health HTTP/1.1" 200
+2026-10-03 10:55:09 | INFO     | uvicorn.access               | 127.0.0.1:58859 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 10:57:08 | INFO     | uvicorn.access               | 127.0.0.1:55218 - "GET /api/status HTTP/1.1" 200
+2026-10-03 10:57:17 | INFO     | uvicorn.access               | 127.0.0.1:55219 - "GET /api/status HTTP/1.1" 200
+2026-10-03 11:13:49 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 11:13:49 | INFO     | app.services.websocket_manager | WebSocket client disconnected (0 remain)
+2026-10-03 12:56:01 | INFO     | uvicorn.error                | 127.0.0.1:60476 - "WebSocket /ws" [accepted]
+2026-10-03 12:56:01 | INFO     | uvicorn.error                | connection open
+2026-10-03 12:56:01 | INFO     | app.services.websocket_manager | WebSocket client connected (1 total)
+2026-10-03 12:56:03 | INFO     | uvicorn.access               | 127.0.0.1:58377 - "GET /health HTTP/1.1" 200
+2026-10-03 12:56:03 | INFO     | uvicorn.access               | 127.0.0.1:58377 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 12:56:03 | INFO     | uvicorn.access               | 127.0.0.1:58377 - "GET /health HTTP/1.1" 200
+2026-10-03 12:56:03 | INFO     | uvicorn.access               | 127.0.0.1:53981 - "GET /api/arduino/status HTTP/1.1" 200
+2026-10-03 12:56:29 | INFO     | app.api.ws                   | Client closed the WebSocket connection
+2026-10-03 12:56:29 | INFO     | app.services.websocket_manager | WebSocket client disconnected (0 remain)

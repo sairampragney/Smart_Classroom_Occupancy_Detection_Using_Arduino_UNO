@@ -1,0 +1,29 @@
+llllllllllllllll   llllllllllllllll
+llllllllllllllll   llllllllllllllll            Admin@PC
+llllllllllllllll   llllllllllllllll            --------------
+llllllllllllllll   llllllllllllllll            OS: Windows 11
+llllllllllllllll   llllllllllllllll            Build: 24H2 (26100)
+llllllllllllllll   llllllllllllllll            Uptime: 7 days, 2 hours, 23 minutes
+llllllllllllllll   llllllllllllllll            Resolution: 1920x1080 @60Hz
+llllllllllllllll   llllllllllllllll            Terminal: C:\Windows\system32\cmd.exe
+llllllllllllllll   llllllllllllllll            CPU: Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz
+                                               GPU: Intel(R) UHD Graphics 620
+llllllllllllllll   llllllllllllllll            Memory: 8081 MB / 16242 MB (49% in use)
+llllllllllllllll   llllllllllllllll            Disk: C:\ 138.07 GB (0.32 GB free)
+llllllllllllllll   llllllllllllllll
+llllllllllllllll   llllllllllllllll            Mem%:  -=[ //////////////////// ]=-
+llllllllllllllll   llllllllllllllll
+llllllllllllllll   llllllllllllllll            Disk%: -=[ //////////////////// ]=-
+llllllllllllllll   llllllllllllllll
+llllllllllllllll   llllllllllllllll                                            
+llllllllllllllll   llllllllllllllll                                            
+
+> smart-classroom-frontend@0.1.0 dev
+> vite --port 5173 --strictPort
+
+
+  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m2005[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
